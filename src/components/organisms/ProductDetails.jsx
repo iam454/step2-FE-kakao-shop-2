@@ -54,7 +54,7 @@ const ProductDetails = () => {
         <ProductDetailsContainer
           photo={
             <ProductPhoto
-              src={`${staticServerUri}${productDetails.image}`}
+              src={`${staticServerUri}/api/${productDetails.image}`}
               alt={productDetails.productName}
             />
           }
