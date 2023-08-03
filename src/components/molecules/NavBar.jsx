@@ -11,12 +11,14 @@ const Container = styled.nav`
   justify-content: space-between;
 `;
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const NavBar = () => {
   return (
     <Container>
-      <Link to="/">
+      <Link to={`${staticServerUri}/`}>
         <img
-          src="../../../assets/logoKakao.png"
+          src={`${staticServerUri}/../../../assets/logoKakao.png`}
           alt="카카오 쇼핑하기"
           width={120}
         />

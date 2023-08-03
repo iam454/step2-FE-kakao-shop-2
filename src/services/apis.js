@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 export const commonInstance = axios.create({
-  baseURL: process.env.REACT_APP_BASE_URL,
+  baseURL: `${staticServerUri}/api/`,
   timeout: 1000,
   headers: {
     "Content-Type": "application/json",
@@ -17,7 +19,7 @@ export const fetchProductById = ({ id }) => {
 };
 
 export const authInstance = axios.create({
-  baseURL: process.env.REACT_APP_BASE_URL,
+  baseURL: `${staticServerUri}/api/`,
   timeout: 1000,
   headers: {
     "Content-Type": "application/json",
