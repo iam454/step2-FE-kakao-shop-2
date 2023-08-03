@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
     <Card to={`${staticServerUri}/products/${product.id}`}>
       <Container>
         <Photo
-          src={`${staticServerUri}/api${product.image}`}
+          src={`${staticServerUri}/assets${product.image}`}
           alt={product.productName}
         />
         <ProductName>{product.productName}</ProductName>
